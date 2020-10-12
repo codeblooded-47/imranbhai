@@ -8,6 +8,34 @@
     <script src="scripts/site.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
+    <style>
+       nav.navbar {
+      background: #13314C;
+    }
+    a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+.btn {
+    color: black;
+    background-color: #F7BE3D;
+}
+.card-header {
+  background-color: #13314c;
+    color: white;
+}
+.card-body{
+  background: #1fb5c78a;
+}
+.list-group-item {
+  background-color: transparent;
+}
+.modal-header {
+    background: #13314C;
+    color: white;
+}
+    </style>
 <body>
 
 <!-- nav bar stuff -->
@@ -57,7 +85,7 @@
 </div> <!-- row end -->
         
 <!-- order details -->
-<div id="order_details">
+<div id="order_details" class="text-center">
 
 
 
@@ -438,7 +466,9 @@ $("#short_details_submit").on('click', function(){
                   var size = Object.size(resp);
                   console.log(size)
                 for (let i = 0; i < size; i++) {
-                  var data = '<div class="card mt-2"><div class="card-header d-flex justify-content-between"> <span id="order_id">'+resp[i].product_id+'</span>  <button class="btn btn-primary" data-toggle="modal" data-target="#orderupdatemodel" data-order-id="'+resp[i].product_id+'" id="btn_for_update_order">Update</button></div><div class="card-body"><!-- <h5 class="card-title"></h5> --><p class="card-text"><!--details list  --><ul class="list-group list-group-flush"><li class="list-group-item">Last Updated At : Utterpradesh</li><li class="list-group-item">Destination : '+ resp[i].destinaton_address+'</li><li class="list-group-item">Intial Address : '+ resp[i].initial_address+'</li><li class="list-group-item">Cost : '+ resp[i].estimated_cost +'</li><li class="list-group-item">Email : '+ resp[i].email+'</li></ul><!-- end --><div class="text-right mt-2"><a href="#" class="btn btn-primary" id="hass">Add To Delivired</a></div></div></div>';
+                  // var data = '<div class="card mt-2"><div class="card-header d-flex justify-content-between"> <span id="order_id">'+resp[i].product_id+'</span>  <button class="btn btn-primary" data-toggle="modal" data-target="#orderupdatemodel" data-order-id="'+resp[i].product_id+'" id="btn_for_update_order">Update</button></div><div class="card-body"><!-- <h5 class="card-title"></h5> --><p class="card-text"><!--details list  --><ul class="list-group list-group-flush"><li class="list-group-item">Last Updated At : Utterpradesh</li><li class="list-group-item">Destination : '+ resp[i].destinaton_address+'</li><li class="list-group-item">Intial Address : '+ resp[i].initial_address+'</li><li class="list-group-item">Cost : '+ resp[i].estimated_cost +'</li><li class="list-group-item">Email : '+ resp[i].email+'</li></ul><!-- end --><div class="text-right mt-2"><a href="#" class="btn btn-primary" id="hass">Add To Delivired</a></div></div></div>';
+                   var data = '<div class="card mt-2 w-75"><div class="card-header d-flex justify-content-between"> <span id="order_id">' + resp[i].product_id + '</span> <div class=""> <button class="btn mr-2" data-toggle="modal" data-target="#orderupdatemodel" data-order-id="' + resp[i].product_id + '" id="btn_for_update_order">Update</button><button class="btn ">Add To Delivered</button></div></div><div class="card-body"><!-- <h5 class="card-title"></h5> --><p class="card-text"><!--details list  --><ul class="list-group list-group-flush"><li class="list-group-item">Last Updated At : Utterpradesh</li><li class="list-group-item">Destination : ' + resp[i].destinaton_address + '</li><li class="list-group-item">Intial Address : ' + resp[i].initial_address + '</li><li class="list-group-item">Cost : ' + resp[i].estimated_cost + '</li><li class="list-group-item">Email : ' + resp[i].email + '</li></ul><!-- end --></div></div>';
+             
                   $("#order_details").append(data)
                   
                 }

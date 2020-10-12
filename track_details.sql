@@ -35,7 +35,8 @@ CREATE TABLE `short_details` (
   `destinaton_address` varchar(300) NOT NULL,
   `initial_address` varchar(300) NOT NULL,
   `client_phone_number` varchar(300) NOT NULL,
-  `estimated_cost` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `estimated_cost` varchar(300)  NOT NULL,
+  `status` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --

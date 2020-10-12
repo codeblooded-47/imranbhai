@@ -1,8 +1,5 @@
 <?php
-
-$servername = "localhost";
-$username = "codeblooded";
-$password = "root@123";
+require_once("adminPanel/db_conf.php");
 $dbname = "trackData";
 
 // Create connection

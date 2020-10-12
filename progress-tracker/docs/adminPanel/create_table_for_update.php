@@ -1,8 +1,9 @@
  <?php
-$servername = "localhost";
-$username = "codeblooded";
-$password = "root@123";
-$dbname = "trackData";
+ require_once("db_conf.php");
+// $servername = "localhost";
+// $username = "codeblooded";
+// $password = "root@123";
+ $dbname = "trackData";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

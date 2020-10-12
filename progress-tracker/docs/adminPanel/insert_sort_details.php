@@ -1,8 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "codeblooded";
-$password = "root@123";
-$dbname = "track_details";;
+ require_once("db_conf.php");
+// $servername = "localhost";
+// $username = "codeblooded";
+// $password = "root@123";
+ $dbname = "track_details";
 
 
 
@@ -23,7 +24,7 @@ $client_phone_number = $_POST['client_phone_number'];
 $estimated_cost = $_POST['estimated_cost'];
 
 
-$sql = "INSERT INTO `short_details`(`email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost`) VALUES ('$email','$product_id','$destination_address','$initial_address','$client_phone_number','$estimated_cost')";
+$sql = "INSERT INTO `short_details`(`email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` , `status`) VALUES ('$email','$product_id','$destination_address','$initial_address','$client_phone_number','$estimated_cost' , 'NO')";
 
 if ($conn->query($sql) === TRUE) {
  $sql = "SELECT `id`, `email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` FROM `short_details`  ORDER BY id DESC LIMIT 1";

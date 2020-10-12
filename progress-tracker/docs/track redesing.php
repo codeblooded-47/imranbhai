@@ -13,6 +13,14 @@
     .card{
       width: 100%;
     }
+    .modal-header {
+    background: #13314C;
+    color: white;
+}
+.modal-body{
+      background: #EFEFEF;
+}
+
     </style>
 </head>
 <body>
@@ -24,7 +32,7 @@
 
 <!-- Modal -->
 <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog  modal-xl">
+  <div class="modal-dialog  modal-lg">
     <div class="modal-content">
       <div class="modal-header ">
         <h5 class="modal-title "  id="print_track_id">Track Id : </h5>
@@ -44,9 +52,7 @@
     </div>
 
      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
-      </div>
+     
     </div>
   </div>
 </div>

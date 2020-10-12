@@ -1,9 +1,10 @@
 <?php
+require_once("db_conf.php");
 date_default_timezone_set("Asia/Calcutta");
-$servername = "localhost";
-$username = "codeblooded";
-$password = "root@123";
-$dbname = "trackData";;
+// $servername = "localhost";
+// $username = "codeblooded";
+// $password = "root@123";
+$dbname = "trackData";
 
 
 // Create connection
