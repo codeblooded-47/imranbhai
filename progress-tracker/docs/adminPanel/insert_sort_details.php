@@ -22,12 +22,15 @@ $destination_address = $_POST['destination_address'];
 $initial_address = $_POST['initial_address'];
 $client_phone_number = $_POST['client_phone_number'];
 $estimated_cost = $_POST['estimated_cost'];
+$no_of_packages = "blah";
+$pickup_date = "blah";
+$assured_dly_date = "blah";
 
-
-$sql = "INSERT INTO `short_details`(`email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` , `status`) VALUES ('$email','$product_id','$destination_address','$initial_address','$client_phone_number','$estimated_cost' , 'NO')";
+// $sql = "INSERT INTO `short_details`(`email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` , `status`) VALUES ('$email','$product_id','$destination_address','$initial_address','$client_phone_number','$estimated_cost' , 'NO')";
+$sql = "INSERT INTO `short_details`(`email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` , `no_of_packages`, `pickup_date`,`assured_dly_date` ,`status`) VALUES ('$email','$product_id','$destination_address','$initial_address','$client_phone_number','$estimated_cost' ,'$no_of_packages' , '$pickup_date' , '$assured_dly_date' ,  'NO')";
 
 if ($conn->query($sql) === TRUE) {
- $sql = "SELECT `id`, `email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` FROM `short_details`  ORDER BY id DESC LIMIT 1";
+ $sql = "SELECT `id`, `email`, `product_id`, `destinaton_address`, `initial_address`, `client_phone_number`, `estimated_cost` , `no_of_packages`, `pickup_date`,`assured_dly_date` ,`status` FROM `short_details`  ORDER BY id DESC LIMIT 1";
 $result = $conn->query($sql);
 
 $resp = $result->fetch_assoc();
